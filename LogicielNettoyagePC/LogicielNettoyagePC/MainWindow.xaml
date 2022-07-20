@@ -1,0 +1,52 @@
+﻿<Window x:Class="LogicielNettoyagePC.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LogicielNettoyagePC"
+        mc:Ignorable="d"
+        x:Name="fenetre"
+        Title="Logiciel nettoyage" Height="700" Width="1000" ResizeMode="NoResize" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" WindowStartupLocation="CenterScreen" Icon="/ico.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="395*"/>
+            <RowDefinition Height="289*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="623*"/>
+            <ColumnDefinition Width="377*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle HorizontalAlignment="Left" Height="175" Stroke="Black" VerticalAlignment="Top" Width="1000" Grid.ColumnSpan="2" Fill="#FF007791" StrokeThickness="0"/>
+        <Rectangle HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="1000" Grid.ColumnSpan="2" Fill="#FFE4E4E4" Margin="0,174,0,0" StrokeThickness="0"/>
+        <!-- Titre -->
+        <Label x:Name="titre" Content="Analyse du PC nécessaire" HorizontalAlignment="Left" Margin="55,25,0,0" VerticalAlignment="Top" Height="62" Width="695" Foreground="White" FontFamily="Arial Nova" FontSize="40" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <!-- SS Titres -->
+        <Label Content="Espace à nettoyer :" HorizontalAlignment="Left" Margin="55,88,0,0" VerticalAlignment="Top" Height="38" Width="240" Foreground="White" FontFamily="Arial Nova" FontSize="22" FontWeight="Bold"/>
+        <Label Content="Dernière analyse :" HorizontalAlignment="Left" Margin="55,117,0,0" VerticalAlignment="Top" Height="38" Width="240" Foreground="White" FontFamily="Arial Nova" FontSize="22" FontWeight="Bold"/>
+        <!-- Valeurs -->
+        <Label x:Name="date" Content="Jamais" HorizontalAlignment="Left" Margin="260,117,0,0" VerticalAlignment="Top" Height="38" Width="240" Foreground="White" FontFamily="Arial Nova Light" FontSize="22" FontWeight="Normal"/>
+        <Label x:Name="espace" Content="??? Mb" HorizontalAlignment="Left" Margin="272,89,0,0" VerticalAlignment="Top" Height="38" Width="240" Foreground="White" FontFamily="Arial Nova Light" FontSize="22" FontWeight="Normal"/>
+        <Button Content="ANALYSER" Grid.Column="1" HorizontalAlignment="Center" Margin="0,49,0,0" VerticalAlignment="Top" Height="77" Width="297" Background="#FF007791" BorderThickness="5,5,5,5" BorderBrush="White" Foreground="White" FontWeight="Bold" FontFamily="Arial Nova" FontSize="26" Click="Button_Analyser_Click"/>
+
+        <!-- Content -->
+        <Button x:Name="btnClean" Content="&#xD;&#xA;NETTOYER" HorizontalAlignment="Left" Margin="65,199,0,0" VerticalAlignment="Top" Height="180" Width="400" Background="#FF007791" BorderThickness="5,5,5,5" BorderBrush="White" Foreground="White" FontWeight="Bold" FontFamily="Arial Nova" FontSize="26" Click="Button_Nettoyer_Click"/>
+        <Button Content="&#xD;&#xA;MISE À JOUR" HorizontalAlignment="Left" Margin="65,4,0,0" VerticalAlignment="Top" Height="180" Width="400" Background="#FF007791" BorderThickness="5,5,5,5" BorderBrush="White" Foreground="White" FontWeight="Bold" FontFamily="Arial Nova" FontSize="26" Click="Button_MAJ_Click" Grid.Row="1"/>
+        <Button Content="&#xD;&#xA;HISTORIQUE" HorizontalAlignment="Left" Margin="528,199,0,0" VerticalAlignment="Top" Height="180" Width="400" Background="#FF007791" BorderThickness="5,5,5,5" BorderBrush="White" Foreground="White" FontWeight="Bold" FontFamily="Arial Nova" FontSize="26" Grid.ColumnSpan="2" Click="Button_Histo_Click"/>
+        <Button Content="&#xD;&#xA;SITE WEB" HorizontalAlignment="Left" Margin="528,4,0,0" VerticalAlignment="Top" Height="180" Width="400" Background="#FF007791" BorderThickness="5,5,5,5" BorderBrush="White" Foreground="White" FontWeight="Bold" FontFamily="Arial Nova" FontSize="26" Grid.ColumnSpan="2" Click="Button_Web_Click" Grid.Row="1"/>
+        <Image Margin="226,222,325,103" Source="/icons8-balayer-100.png" IsHitTestVisible="False"/>
+        <Image Margin="81,221,224,104" Source="/ico-list.png" IsHitTestVisible="False" Grid.Column="1"/>
+        <Image Margin="226,31,325,188" Source="/icons8-mettre-à-jour-la-rotation-à-gauche-100.png" IsHitTestVisible="False" Grid.Row="1"/>
+        <Image Margin="81,30,224,189" Source="/icons8-domaine-64.png" IsHitTestVisible="False" Grid.Column="1" Grid.Row="1"/>
+
+
+        <!-- Footer -->
+        <Rectangle HorizontalAlignment="Left" Height="90" Stroke="Black" VerticalAlignment="Top" Width="1000" Grid.ColumnSpan="2" Fill="#FFE4E4E4" Margin="0,199,0,0" StrokeThickness="0" Grid.Row="1"/>
+        <Label Content="Copyright 2020 - Anthony" HorizontalAlignment="Left" Margin="32,205,0,0" VerticalAlignment="Top" Height="38" Width="928" Foreground="Black" FontFamily="Arial Nova" FontSize="20" FontWeight="Normal" Grid.ColumnSpan="2" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" Grid.Row="1"/>
+
+        <Rectangle x:Name="bandeau" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" Width="1000" Grid.ColumnSpan="2" Fill="#FFE09797" Margin="0,249,0,0" StrokeThickness="0" Visibility="Hidden" Grid.Row="1"/>
+        <Label x:Name="actuTxt" Content="Copyright 2020 - Anthony" HorizontalAlignment="Left" Margin="32,250,0,0" VerticalAlignment="Top" Height="38" Width="928" Foreground="Black" FontFamily="Arial Nova" FontSize="20" FontWeight="Normal" Grid.ColumnSpan="2" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" Visibility="Hidden" Grid.Row="1"/>
+
+
+
+    </Grid>
+</Window>
